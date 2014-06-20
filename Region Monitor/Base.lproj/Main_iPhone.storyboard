@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5023" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="RMViewController" sceneMemberID="viewController">
@@ -15,8 +15,64 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="vxE-PX-z5N">
+                                <rect key="frame" x="0.0" y="100" width="320" height="346"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="ByE-4e-ygs"/>
+                                </connections>
+                            </mapView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HTd-0O-NLq">
+                                <rect key="frame" x="0.0" y="43" width="320" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l0R-od-y12">
+                                <rect key="frame" x="15" y="473" width="115" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Current Location">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showCurrentLocation:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="MKJ-EV-6h8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mc2-J8-Upu">
+                                <rect key="frame" x="253" y="473" width="47" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Paypal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showPaypalCampus:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="r6q-oB-WUi"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="HTd-0O-NLq" secondAttribute="centerX" id="Cdn-3c-NOj"/>
+                            <constraint firstItem="l0R-od-y12" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="15" id="FAb-3T-nz0"/>
+                            <constraint firstAttribute="width" secondItem="vxE-PX-z5N" secondAttribute="width" id="JeT-YN-Ye9"/>
+                            <constraint firstItem="HTd-0O-NLq" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" id="MKJ-oJ-3LC"/>
+                            <constraint firstAttribute="width" secondItem="vxE-PX-z5N" secondAttribute="width" id="PBq-mb-ZwK"/>
+                            <constraint firstItem="vxE-PX-z5N" firstAttribute="top" secondItem="HTd-0O-NLq" secondAttribute="bottom" constant="36" id="SQI-A2-jDf"/>
+                            <constraint firstAttribute="trailing" secondItem="mc2-J8-Upu" secondAttribute="trailing" constant="20" id="cST-oC-pux"/>
+                            <constraint firstItem="vxE-PX-z5N" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="dc7-ka-6Y5"/>
+                            <constraint firstItem="HTd-0O-NLq" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="23" id="hky-Mn-qV3"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="l0R-od-y12" secondAttribute="bottom" constant="65" id="iXM-I1-84n"/>
+                            <constraint firstItem="l0R-od-y12" firstAttribute="centerY" secondItem="mc2-J8-Upu" secondAttribute="centerY" id="thk-sd-m4M"/>
+                            <constraint firstItem="l0R-od-y12" firstAttribute="top" secondItem="vxE-PX-z5N" secondAttribute="bottom" constant="27" id="x2c-eI-d09"/>
+                        </constraints>
                     </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <connections>
+                        <outlet property="mapView" destination="vxE-PX-z5N" id="jP6-D4-uqY"/>
+                        <outlet property="showCurrentLocationButton" destination="l0R-od-y12" id="e8u-AO-kAG"/>
+                        <outlet property="showPaypalCampusButton" destination="mc2-J8-Upu" id="HuI-VG-Grj"/>
+                        <outlet property="titleLabel" destination="HTd-0O-NLq" id="A1D-VR-QPo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

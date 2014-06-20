@@ -22,6 +22,8 @@
 		085A6D311949327800E56D75 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 085A6D101949327800E56D75 /* UIKit.framework */; };
 		085A6D391949327800E56D75 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 085A6D371949327800E56D75 /* InfoPlist.strings */; };
 		085A6D3B1949327800E56D75 /* Region_MonitorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 085A6D3A1949327800E56D75 /* Region_MonitorTests.m */; };
+		085A6D451949336B00E56D75 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 085A6D441949336B00E56D75 /* MapKit.framework */; };
+		085A6D481949497D00E56D75 /* RMTestUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 085A6D471949497D00E56D75 /* RMTestUtil.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,9 @@
 		085A6D361949327800E56D75 /* Region MonitorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Region MonitorTests-Info.plist"; sourceTree = "<group>"; };
 		085A6D381949327800E56D75 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		085A6D3A1949327800E56D75 /* Region_MonitorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Region_MonitorTests.m; sourceTree = "<group>"; };
+		085A6D441949336B00E56D75 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		085A6D461949497D00E56D75 /* RMTestUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMTestUtil.h; sourceTree = "<group>"; };
+		085A6D471949497D00E56D75 /* RMTestUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMTestUtil.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				085A6D451949336B00E56D75 /* MapKit.framework in Frameworks */,
 				085A6D0F1949327800E56D75 /* CoreGraphics.framework in Frameworks */,
 				085A6D111949327800E56D75 /* UIKit.framework in Frameworks */,
 				085A6D0D1949327800E56D75 /* Foundation.framework in Frameworks */,
@@ -103,6 +109,7 @@
 		085A6D0B1949327800E56D75 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				085A6D441949336B00E56D75 /* MapKit.framework */,
 				085A6D0C1949327800E56D75 /* Foundation.framework */,
 				085A6D0E1949327800E56D75 /* CoreGraphics.framework */,
 				085A6D101949327800E56D75 /* UIKit.framework */,
@@ -116,6 +123,8 @@
 			children = (
 				085A6D1B1949327800E56D75 /* RMAppDelegate.h */,
 				085A6D1C1949327800E56D75 /* RMAppDelegate.m */,
+				085A6D461949497D00E56D75 /* RMTestUtil.h */,
+				085A6D471949497D00E56D75 /* RMTestUtil.m */,
 				085A6D1E1949327800E56D75 /* Main_iPhone.storyboard */,
 				085A6D211949327800E56D75 /* Main_iPad.storyboard */,
 				085A6D241949327800E56D75 /* RMViewController.h */,
@@ -254,6 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				085A6D481949497D00E56D75 /* RMTestUtil.m in Sources */,
 				085A6D191949327800E56D75 /* main.m in Sources */,
 				085A6D1D1949327800E56D75 /* RMAppDelegate.m in Sources */,
 				085A6D261949327800E56D75 /* RMViewController.m in Sources */,
@@ -471,6 +481,7 @@
 				085A6D401949327800E56D75 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		085A6D411949327800E56D75 /* Build configuration list for PBXNativeTarget "Region MonitorTests" */ = {
 			isa = XCConfigurationList;
@@ -479,6 +490,7 @@
 				085A6D431949327800E56D75 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
